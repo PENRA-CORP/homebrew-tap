@@ -14,6 +14,6 @@ class Condense < Formula
   end
 
   test do
-    assert_match "0.1.0", shell_output("#{bin}/condense --version")
+    assert_match version.to_s, shell_output("#{bin}/condense --version")
   end
 end
