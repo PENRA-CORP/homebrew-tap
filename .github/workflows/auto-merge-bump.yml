@@ -1,0 +1,26 @@
+name: auto-merge-bump
+
+# Merge automatiquement les PR de bump ouvertes par la CI de PENRA-CORP/Condense
+# (branches `bump-*` créées par dawidd6/action-homebrew-bump-formula).
+# pull_request_target : s'exécute avec le token du repo de base (droits d'écriture),
+# sans checkout du code de la PR → pas d'exécution de code externe.
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  merge:
+    # Uniquement les PR de bump automatiques (nom de branche `bump-...`).
+    if: startsWith(github.event.pull_request.head.ref, 'bump-')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Squash-merge the bump PR
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          PR: ${{ github.event.pull_request.number }}
+        run: gh pr merge "$PR" --squash --delete-branch
