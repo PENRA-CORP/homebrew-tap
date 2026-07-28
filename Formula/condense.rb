@@ -3,8 +3,8 @@
 class Condense < Formula
   desc "CLI qui optimise les tokens envoyés à Claude & Codex"
   homepage "https://github.com/PENRA-CORP/Condense"
-  url "https://registry.npmjs.org/@penra/condense/-/condense-0.1.31.tgz"
-  sha256 "27e04485d9d27155101f9d2e5ccc79d04340469710d6d79995ff31cc69f3261e"
+  url "https://registry.npmjs.org/@penra/condense/-/condense-0.1.32.tgz"
+  sha256 "00e42068dc93cb4c71559fcffed8db318a12cb8c20f1bb506b93d71f51c91911"
   license "MIT"
   depends_on "node"
 
