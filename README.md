@@ -6,13 +6,13 @@ Tap Homebrew des outils PENRA-CORP.
 
 ```bash
 brew tap PENRA-CORP/tap
-brew install condense
+brew install capsul
 ```
 
 Ou en une ligne :
 
 ```bash
-brew install PENRA-CORP/tap/condense
+brew install PENRA-CORP/tap/capsul
 ```
 
 Les formulas sont mises à jour automatiquement à chaque release par la CI du repo source.
