@@ -13,8 +13,8 @@
 class Capsul < Formula
   desc "Context optimizer for the Claude and Codex coding agents"
   homepage "https://capsul.chat"
-  url "https://registry.npmjs.org/@penra/capsul/-/capsul-1.1.3.tgz"
-  sha256 "5f9204b631a009aba2631c5cec40efaf614220662ec8035dcb5062a7df3729fd"
+  url "https://registry.npmjs.org/@penra/capsul/-/capsul-1.1.4.tgz"
+  sha256 "8828f3b717105a8eae14ed57d24b75e778f1de2579b3f060793dd694052b000f"
   license :cannot_represent # propriétaire — voir LICENSE dans l'archive
   depends_on "node"
 
